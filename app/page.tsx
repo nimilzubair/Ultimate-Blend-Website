@@ -1,103 +1,142 @@
-import Image from "next/image";
+import { Target, Users, Award, TrendingUp } from "lucide-react";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-slate-50">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24">
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            About Us
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
+            Committed to developing and providing the best chemical blends for concrete 
+            manufacturers to achieve durable, sustainable, and innovative building solutions.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Company Overview */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">Who We Are</h2>
+            <div className="space-y-6 text-slate-700 leading-relaxed">
+              <p className="text-lg">
+                Ultimate Blend Pvt Ltd is a leading manufacturer of high-performance chemical 
+                blends for the construction industry in Pakistan. We specialize in producing 
+                concrete admixtures, accelerators, retarders, and cement grinding aids that 
+                help our customers achieve superior results in their projects.
+              </p>
+              <p className="text-lg">
+                Our company was founded on the principles of innovation, quality, and customer 
+                service. We understand that the construction industry demands reliable, 
+                consistent products that perform under pressure, and we are committed to 
+                delivering exactly that.
+              </p>
+              <p className="text-lg">
+                With state-of-the-art manufacturing facilities, rigorous quality control 
+                processes, and a team of experienced chemical engineers, we ensure that 
+                every product that leaves our facility meets the highest standards of 
+                excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-6">
+                <div className="bg-blue-100 p-3 rounded-xl mr-4">
+                  <Target className="text-blue-600" size={28} />
+                </div>
+                <h2 className="text-3xl font-bold text-slate-900">Our Vision</h2>
+              </div>
+              <p className="text-slate-700 leading-relaxed">
+                Ultimate Blend Pvt Ltd is committed to developing and providing the best 
+                blends for concrete manufacturers to achieve durable, sustainable, and 
+                innovative building solutions for consistent quality.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-6">
+                <div className="bg-blue-100 p-3 rounded-xl mr-4">
+                  <Users className="text-blue-600" size={28} />
+                </div>
+                <h2 className="text-3xl font-bold text-slate-900">Our Mission</h2>
+              </div>
+              <p className="text-slate-700 leading-relaxed">
+                To provide our concrete manufacturing partners with superior, high-performance 
+                chemical blends through rigorous research, quality assurance, and responsive 
+                technical support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-slate-900 mb-16">Our Core Values</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-blue-200 group-hover:scale-110 transition-transform">
+                <Award className="text-blue-600" size={36} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Quality Excellence</h3>
+              <p className="text-slate-600 leading-relaxed">
+                We maintain rigorous quality control standards to ensure every product 
+                meets or exceeds industry specifications.
+              </p>
+            </div>
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-blue-200 group-hover:scale-110 transition-transform">
+                <TrendingUp className="text-blue-600" size={36} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Innovation</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Continuous research and development to create cutting-edge solutions 
+                for the evolving construction industry.
+              </p>
+            </div>
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-blue-200 group-hover:scale-110 transition-transform">
+                <Users className="text-blue-600" size={36} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Customer Partnership</h3>
+              <p className="text-slate-600 leading-relaxed">
+                We work closely with our customers to understand their needs and 
+                provide tailored solutions and technical support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CEO Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-12">Leadership</h2>
+            <div className="bg-white/5 backdrop-blur-sm p-10 rounded-2xl border border-white/10">
+              <h3 className="text-3xl font-bold text-white mb-2">Faheem Ahmed</h3>
+              <p className="text-blue-400 font-semibold mb-6 text-lg">Chief Executive Officer</p>
+              <p className="text-slate-300 leading-relaxed text-lg">
+                Under the leadership of CEO Faheem Ahmed, Ultimate Blend Pvt Ltd has grown 
+                to become a trusted name in the chemical manufacturing industry. With a vision 
+                for excellence and a commitment to innovation, our team continues to push the 
+                boundaries of what's possible in construction chemistry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
