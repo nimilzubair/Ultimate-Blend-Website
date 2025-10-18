@@ -131,7 +131,7 @@ export default function HomePage() {
                 Under the leadership of CEO Faheem Ahmed, Ultimate Blend Pvt Ltd has grown 
                 to become a trusted name in the chemical manufacturing industry. With a vision 
                 for excellence and a commitment to innovation, our team continues to push the 
-                boundaries of what's possible in construction chemistry.
+                boundaries of what&apos;s possible in construction chemistry.
               </p>
             </div>
           </div>

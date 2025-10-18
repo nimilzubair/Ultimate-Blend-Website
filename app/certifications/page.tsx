@@ -24,7 +24,7 @@ export default function CertificationsPage() {
               Quality You Can Verify. Traceability You Can Trust.
             </h2>
             <p className="text-lg text-slate-700 leading-relaxed">
-              At Ultimate Blend, quality is not just a promise—it's a commitment backed by 
+              At Ultimate Blend, quality is not just a promise—it&apos;s a commitment backed by 
               rigorous testing, certification, and continuous improvement. Our quality 
               management system ensures every product meets or exceeds international standards.
             </p>

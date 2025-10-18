@@ -64,7 +64,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl leading-relaxed">
-            Get in touch with our team. We're here to answer your questions and help you 
+            Get in touch with our team. We&apos;re here to answer your questions and help you 
             find the right solutions for your needs.
           </p>
         </div>

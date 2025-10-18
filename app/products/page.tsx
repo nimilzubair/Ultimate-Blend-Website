@@ -176,7 +176,7 @@ export default function ProductsPage() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Technical Support & Service</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Our commitment doesn't end with product delivery. We provide comprehensive 
+              Our commitment doesn&apos;t end with product delivery. We provide comprehensive 
               technical support including on-site testing, mix-design optimization, pilot 
               trials, and performance monitoring.
             </p>
