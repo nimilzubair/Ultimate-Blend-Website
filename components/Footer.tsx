@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="relative w-10 h-10">
+              <div className="relative w-12 h-12">
                 <Image 
                   src="/logo.png" 
                   alt="Ultimate Blend Logo" 

@@ -1,4 +1,5 @@
 import { Award, Shield, CheckCircle, FileCheck } from "lucide-react";
+import Image from "next/image";
 
 export default function CertificationsPage() {
   return (
@@ -91,7 +92,7 @@ export default function CertificationsPage() {
             Our Certifications & Compliance
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
             {[
               {
                 icon: Award,
@@ -126,6 +127,24 @@ export default function CertificationsPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Certificate Image */}
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-3xl font-bold text-center text-slate-900 mb-8">Our Certificate</h3>
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200 hover:shadow-3xl transition-shadow">
+              <div className="relative h-[600px]">
+                <Image 
+                  src="/certificate.jpg"
+                  alt="Ultimate Blend Certification"
+                  fill
+                  className="object-contain p-4"
+                />
+              </div>
+              <div className="p-6 bg-gradient-to-br from-blue-50 to-slate-50 text-center">
+                <p className="text-slate-700 font-semibold text-lg">ISO Quality Management Certification</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

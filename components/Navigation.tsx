@@ -23,7 +23,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative w-12 h-12 transition-transform group-hover:scale-105">
+            <div className="relative w-16 h-16 transition-transform group-hover:scale-105">
               <Image 
                 src="/logo.png" 
                 alt="Ultimate Blend Logo" 
@@ -32,8 +32,8 @@ export default function Navigation() {
               />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-slate-900 tracking-wide">ULTIMATE BLEND</h1>
-              <p className="text-xs text-blue-600 font-medium">The Chemical Expert</p>
+              <h1 className="text-xl font-bold text-slate-900 tracking-wide">ULTIMATE BLEND</h1>
+              <p className="text-sm text-blue-600 font-medium">The Chemical Expert</p>
             </div>
           </Link>
           

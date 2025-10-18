@@ -1,4 +1,5 @@
 import { Package, Zap, Clock, Wrench } from "lucide-react";
+import Image from "next/image";
 
 export default function ProductsPage() {
   const products = [
@@ -91,15 +92,25 @@ export default function ProductsPage() {
       {/* Product Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Performance-Driven Chemical Blends
-            </h2>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              Our comprehensive product portfolio is designed to meet the diverse needs of 
-              concrete manufacturers, ready-mix suppliers, and cement plants. Each product 
-              is formulated with precision chemistry to deliver reliable, field-proven results.
-            </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">
+                Performance-Driven Chemical Blends
+              </h2>
+              <p className="text-lg text-slate-700 leading-relaxed">
+                Our comprehensive product portfolio is designed to meet the diverse needs of 
+                concrete manufacturers, ready-mix suppliers, and cement plants. Each product 
+                is formulated with precision chemistry to deliver reliable, field-proven results.
+              </p>
+            </div>
+            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+              <Image 
+                src="/products-overview.jpg" 
+                alt="Ultimate Blend Products" 
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>

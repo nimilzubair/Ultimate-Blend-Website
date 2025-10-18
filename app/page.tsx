@@ -1,4 +1,5 @@
 import { Target, Users, Award, TrendingUp } from "lucide-react";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -20,27 +21,37 @@ export default function HomePage() {
       {/* Company Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">Who We Are</h2>
-            <div className="space-y-6 text-slate-700 leading-relaxed">
-              <p className="text-lg">
-                Ultimate Blend Pvt Ltd is a leading manufacturer of high-performance chemical 
-                blends for the construction industry in Pakistan. We specialize in producing 
-                concrete admixtures, accelerators, retarders, and cement grinding aids that 
-                help our customers achieve superior results in their projects.
-              </p>
-              <p className="text-lg">
-                Our company was founded on the principles of innovation, quality, and customer 
-                service. We understand that the construction industry demands reliable, 
-                consistent products that perform under pressure, and we are committed to 
-                delivering exactly that.
-              </p>
-              <p className="text-lg">
-                With state-of-the-art manufacturing facilities, rigorous quality control 
-                processes, and a team of experienced chemical engineers, we ensure that 
-                every product that leaves our facility meets the highest standards of 
-                excellence.
-              </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Who We Are</h2>
+              <div className="space-y-6 text-slate-700 leading-relaxed">
+                <p className="text-lg">
+                  Ultimate Blend Pvt Ltd is a leading manufacturer of high-performance chemical 
+                  blends for the construction industry in Pakistan. We specialize in producing 
+                  concrete admixtures, accelerators, retarders, and cement grinding aids that 
+                  help our customers achieve superior results in their projects.
+                </p>
+                <p className="text-lg">
+                  Our company was founded on the principles of innovation, quality, and customer 
+                  service. We understand that the construction industry demands reliable, 
+                  consistent products that perform under pressure, and we are committed to 
+                  delivering exactly that.
+                </p>
+                <p className="text-lg">
+                  With state-of-the-art manufacturing facilities, rigorous quality control 
+                  processes, and a team of experienced chemical engineers, we ensure that 
+                  every product that leaves our facility meets the highest standards of 
+                  excellence.
+                </p>
+              </div>
+            </div>
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <Image 
+                src="/about-facility.jpg" 
+                alt="Ultimate Blend Manufacturing Facility" 
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -122,17 +133,31 @@ export default function HomePage() {
       {/* CEO Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-12">Leadership</h2>
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold mb-12 text-center">Leadership</h2>
             <div className="bg-white/5 backdrop-blur-sm p-10 rounded-2xl border border-white/10">
-              <h3 className="text-3xl font-bold text-white mb-2">Faheem Ahmed</h3>
-              <p className="text-blue-400 font-semibold mb-6 text-lg">Chief Executive Officer</p>
-              <p className="text-slate-300 leading-relaxed text-lg">
-                Under the leadership of CEO Faheem Ahmed, Ultimate Blend Pvt Ltd has grown 
-                to become a trusted name in the chemical manufacturing industry. With a vision 
-                for excellence and a commitment to innovation, our team continues to push the 
-                boundaries of what&apos;s possible in construction chemistry.
-              </p>
+              <div className="grid md:grid-cols-3 gap-8 items-center">
+                <div className="md:col-span-1">
+                  <div className="relative w-48 h-48 mx-auto rounded-2xl overflow-hidden border-4 border-blue-400/30 shadow-2xl">
+                    <Image 
+                      src="/ceo-photo.jpg" 
+                      alt="Faheem Ahmed - CEO" 
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="md:col-span-2 text-center md:text-left">
+                  <h3 className="text-3xl font-bold text-white mb-2">Faheem Ahmed</h3>
+                  <p className="text-blue-400 font-semibold mb-6 text-lg">Chief Executive Officer</p>
+                  <p className="text-slate-300 leading-relaxed text-lg">
+                    Under the leadership of CEO Faheem Ahmed, Ultimate Blend Pvt Ltd has grown 
+                    to become a trusted name in the chemical manufacturing industry. With a vision 
+                    for excellence and a commitment to innovation, our team continues to push the 
+                    boundaries of what&apos;s possible in construction chemistry.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
