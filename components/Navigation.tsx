@@ -63,23 +63,25 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Fixed as overlay */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 space-y-1 bg-white border-t border-slate-200">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block py-3 px-4 font-medium rounded-lg transition-all ${
-                  pathname === link.href 
-                    ? 'bg-blue-600 text-white' 
-                    : 'text-slate-700 hover:bg-slate-100 hover:text-blue-600'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="md:hidden absolute left-0 right-0 top-20 bg-white border-t border-slate-200 shadow-lg z-50">
+            <div className="space-y-1 p-4 bg-white">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`block py-3 px-4 font-medium rounded-lg transition-all ${
+                    pathname === link.href 
+                      ? 'bg-blue-600 text-white' 
+                      : 'text-slate-700 hover:bg-slate-100 hover:text-blue-600'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </div>

@@ -70,7 +70,7 @@ export default function Footer() {
                   href="tel:+923052006600" 
                   className="text-slate-400 hover:text-blue-400 transition-colors text-sm"
                 >
-                  +92 305 2006600
+                  021 3432 0417
                 </a>
               </li>
               <li className="flex items-center group">
