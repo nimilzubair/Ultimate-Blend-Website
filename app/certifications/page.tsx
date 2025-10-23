@@ -5,25 +5,25 @@ export default function CertificationsPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-3 sm:mb-4">
             Certifications & Quality
           </h1>
-          <p className="text-lg text-blue-100 max-w-2xl">
+          <p className="text-base sm:text-lg text-blue-100 max-w-2xl">
             Committed to the highest standards of quality, safety, and environmental responsibility
           </p>
         </div>
       </section>
 
       {/* Quality Overview */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
               Quality You Can Verify. Traceability You Can Trust.
             </h2>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
               At Ultimate Blend, quality is not just a promise—it&apos;s a commitment backed by 
               rigorous testing, certification, and continuous improvement. Our quality 
               management system ensures every product meets or exceeds international standards.
@@ -37,12 +37,12 @@ export default function CertificationsPage() {
               { icon: CheckCircle, title: "Batch Traceability", desc: "Complete tracking from production to delivery" },
               { icon: FileCheck, title: "QA/QC Systems", desc: "Rigorous testing at every stage" }
             ].map((item, idx) => (
-              <div key={idx} className="bg-blue-50 p-6 rounded-lg text-center border border-blue-100">
-                <div className="bg-white w-14 h-14 rounded-lg flex items-center justify-center mx-auto mb-4 border border-blue-200">
-                  <item.icon className="text-blue-600" size={24} />
+              <div key={idx} className="bg-blue-50 p-5 sm:p-6 rounded-lg text-center border border-blue-100">
+                <div className="bg-white w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4 border border-blue-200">
+                  <item.icon className="text-blue-600" size={22} />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+                <h3 className="font-bold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">{item.title}</h3>
+                <p className="text-gray-600 text-xs sm:text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -50,13 +50,13 @@ export default function CertificationsPage() {
       </section>
 
       {/* Quality Assurance Process */}
-      <section className="py-16 bg-white">
+      <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-10 sm:mb-12">
             Our Quality Assurance Process
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 num: "01",
@@ -74,10 +74,10 @@ export default function CertificationsPage() {
                 desc: "Comprehensive testing of finished products in our state-of-the-art laboratory. Products are released only after passing all quality parameters."
               }
             ].map((step, idx) => (
-              <div key={idx} className="border border-gray-200 p-8 rounded-lg">
-                <div className="text-4xl font-bold text-blue-600 mb-4">{step.num}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{step.desc}</p>
+              <div key={idx} className="border border-gray-200 p-6 sm:p-8 rounded-lg">
+                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-3 sm:mb-4">{step.num}</div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-4">{step.title}</h3>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -85,13 +85,13 @@ export default function CertificationsPage() {
       </section>
 
       {/* Certifications Details */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-10 sm:mb-12">
             Our Certifications & Compliance
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto mb-10 sm:mb-16">
             {[
               {
                 icon: Award,
@@ -114,14 +114,14 @@ export default function CertificationsPage() {
                 desc: "All products undergo extensive laboratory and field testing. Test reports and technical data sheets available for every batch."
               }
             ].map((cert, idx) => (
-              <div key={idx} className="bg-blue-50 rounded-lg p-6 border border-blue-100">
-                <div className="flex items-start mb-4">
-                  <div className="bg-white p-3 rounded-lg mr-4 border border-blue-200">
-                    <cert.icon className="text-blue-600" size={24} />
+              <div key={idx} className="bg-blue-50 rounded-lg p-5 sm:p-6 border border-blue-100">
+                <div className="flex items-start mb-3 sm:mb-4">
+                  <div className="bg-white p-2 sm:p-3 rounded-lg mr-3 sm:mr-4 border border-blue-200">
+                    <cert.icon className="text-blue-600" size={22} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{cert.title}</h3>
-                    <p className="text-gray-700 leading-relaxed text-sm">{cert.desc}</p>
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">{cert.title}</h3>
+                    <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">{cert.desc}</p>
                   </div>
                 </div>
               </div>
@@ -130,18 +130,22 @@ export default function CertificationsPage() {
 
           {/* Certificate Image */}
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-center text-gray-900 mb-6">Our Certificate</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-center text-gray-900 mb-5 sm:mb-6">
+              Our Certificate
+            </h3>
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="relative h-[600px]">
+              <div className="relative h-[400px] sm:h-[600px]">
                 <Image 
                   src="/certificate.jpg"
                   alt="Ultimate Blend Certification"
                   fill
-                  className="object-contain p-4"
+                  className="object-contain p-3 sm:p-4"
                 />
               </div>
-              <div className="p-4 bg-gray-50 text-center border-t border-gray-200">
-                <p className="text-gray-700 font-semibold">ISO Quality Management Certification</p>
+              <div className="p-3 sm:p-4 bg-gray-50 text-center border-t border-gray-200">
+                <p className="text-gray-700 font-semibold text-sm sm:text-base">
+                  ISO Quality Management Certification
+                </p>
               </div>
             </div>
           </div>
@@ -149,16 +153,18 @@ export default function CertificationsPage() {
       </section>
 
       {/* Traceability */}
-      <section className="py-16 bg-blue-900 text-white">
+      <section className="py-10 sm:py-16 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">End-to-End Traceability</h2>
-            <p className="text-blue-100 mb-8 leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+              End-to-End Traceability
+            </h2>
+            <p className="text-blue-100 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
               Every product batch is assigned a unique identifier, allowing complete traceability 
               from raw materials to final delivery. This ensures accountability and enables rapid 
               response in case of any quality concerns.
             </p>
-            <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="grid md:grid-cols-3 gap-4 sm:gap-6 text-left">
               {[
                 {
                   title: "Batch Documentation",
@@ -173,9 +179,9 @@ export default function CertificationsPage() {
                   desc: "Comprehensive records maintained for compliance and customer audits"
                 }
               ].map((item, idx) => (
-                <div key={idx} className="bg-white/10 p-6 rounded-lg border border-white/20">
-                  <h3 className="font-bold mb-2 text-white">{item.title}</h3>
-                  <p className="text-blue-100 text-sm leading-relaxed">{item.desc}</p>
+                <div key={idx} className="bg-white/10 p-5 sm:p-6 rounded-lg border border-white/20">
+                  <h3 className="font-bold mb-1 sm:mb-2 text-sm sm:text-base text-white">{item.title}</h3>
+                  <p className="text-blue-100 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -184,11 +190,13 @@ export default function CertificationsPage() {
       </section>
 
       {/* Commitment */}
-      <section className="py-16 bg-white">
+      <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Commitment to Excellence</h2>
-            <p className="text-gray-700 leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Our Commitment to Excellence
+            </h2>
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
               Quality is not a destination but a journey of continuous improvement. We invest 
               in the latest testing equipment, train our team regularly, and maintain open 
               communication with our customers to ensure we consistently deliver products that 
