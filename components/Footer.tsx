@@ -79,7 +79,7 @@ export default function Footer() {
                   href="mailto:info@ultimate-blend.com" 
                   className="text-slate-400 hover:text-blue-400 transition-colors text-sm"
                 >
-                  info@ultimate-blend.com
+                  ultimateblend2025@outlook.com
                 </a>
               </li>
             </ul>

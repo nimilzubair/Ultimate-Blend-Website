@@ -15,14 +15,14 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -36,7 +36,7 @@ export default function ContactPage() {
       `Message:\n${formData.message}`
     );
 
-    window.location.href = `mailto:info@ultimate-blend.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:ultimateblend2025@outlook.com?subject=${subject}&body=${body}`;
     
     setIsSubmitting(false);
     setSubmitSuccess(true);
@@ -57,22 +57,22 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-14 sm:py-20">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-5xl font-bold mb-3 sm:mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Contact Us
           </h1>
-          <p className="text-base sm:text-lg text-blue-100 max-w-2xl leading-relaxed">
-            Get in touch with our team. We&apos;re here to answer your questions and help you 
+          <p className="text-sm sm:text-base lg:text-lg text-blue-100 max-w-2xl leading-relaxed">
+            Get in touch with our team. We're here to answer your questions and help you 
             find the right solutions for your needs.
           </p>
         </div>
       </section>
 
       {/* Contact Information & Form */}
-      <section className="py-12 sm:py-20 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-10 sm:gap-12">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10">
             {/* Contact Information */}
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Get In Touch</h2>
@@ -83,45 +83,45 @@ export default function ContactPage() {
 
               <div className="space-y-5 sm:space-y-6">
                 <div className="flex items-start group">
-                  <div className="bg-blue-100 p-3 sm:p-4 rounded-xl mr-4 border border-blue-200 group-hover:bg-blue-200 transition-colors">
+                  <div className="bg-blue-100 p-3 sm:p-4 rounded-xl mr-4 border border-blue-200 group-hover:bg-blue-200 transition-colors flex-shrink-0">
                     <MapPin className="text-blue-600" size={22} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Office Address</h3>
+                    <h3 className="font-bold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">Office Address</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                      Karachi, Sindh<br />
-                      Pakistan
+                      Plot # E-71, P&T Co-Operative Housing Society,<br />
+                      Sector 31-D, Korangi Township, Karachi
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start group">
-                  <div className="bg-blue-100 p-3 sm:p-4 rounded-xl mr-4 border border-blue-200 group-hover:bg-blue-200 transition-colors">
+                  <div className="bg-blue-100 p-3 sm:p-4 rounded-xl mr-4 border border-blue-200 group-hover:bg-blue-200 transition-colors flex-shrink-0">
                     <Phone className="text-blue-600" size={22} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Phone</h3>
-                    <a href="tel:+923052006600" className="text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base">
-                      021 3432 0417
+                    <h3 className="font-bold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">Phone</h3>
+                    <a href="tel:+92213432041" className="text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base block">
+                      021-34320417
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start group">
-                  <div className="bg-blue-100 p-3 sm:p-4 rounded-xl mr-4 border border-blue-200 group-hover:bg-blue-200 transition-colors">
+                  <div className="bg-blue-100 p-3 sm:p-4 rounded-xl mr-4 border border-blue-200 group-hover:bg-blue-200 transition-colors flex-shrink-0">
                     <Mail className="text-blue-600" size={22} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">Email</h3>
-                    <a href="mailto:info@ultimate-blend.com" className="text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base">
-                      info@ultimate-blend.com
+                    <h3 className="font-bold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">Email</h3>
+                    <a href="mailto:ultimateblend2025@outlook.com" className="text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base break-all">
+                      ultimateblend2025@outlook.com
                     </a>
                   </div>
                 </div>
               </div>
 
               {/* Business Hours */}
-              <div className="mt-8 bg-gradient-to-br from-blue-50 to-gray-50 p-5 sm:p-6 rounded-2xl border border-blue-200">
+              <div className="mt-8 bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-5 sm:p-6 rounded-xl shadow-sm">
                 <h3 className="font-bold text-gray-900 mb-3 sm:mb-4 text-base sm:text-lg">Business Hours</h3>
                 <div className="space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
                   <div className="flex justify-between">
@@ -153,39 +153,70 @@ export default function ContactPage() {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-                {["name", "email", "phone", "company"].map((field) => (
-                  <div key={field}>
-                    <label htmlFor={field} className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2 capitalize">
-                      {field === "name" ? "Full Name *" :
-                       field === "email" ? "Email Address *" :
-                       field === "phone" ? "Phone Number" :
-                       "Company Name"}
-                    </label>
-                    <input
-                      type={field === "email" ? "email" : field === "phone" ? "tel" : "text"}
-                      id={field}
-                      name={field}
-                      required={field === "name" || field === "email"}
-                      value={(formData as any)[field]}
-                      onChange={handleInputChange}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm sm:text-base"
-                      placeholder={
-                        field === "name" ? "John Doe" :
-                        field === "email" ? "john@example.com" :
-                        field === "phone" ? "+92 300 0000000" :
-                        "Your Company"
-                      }
-                    />
-                  </div>
-                ))}
+              <div className="space-y-4 sm:space-y-5">
+                <div>
+                  <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm sm:text-base"
+                    placeholder="John Doe"
+                  />
+                </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+                  <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm sm:text-base"
+                    placeholder="john@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm sm:text-base"
+                    placeholder="+92 300 0000000"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+                    Company Name
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm sm:text-base"
+                    placeholder="Your Company"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
                     Subject *
                   </label>
                   <select
-                    id="subject"
                     name="subject"
                     required
                     value={formData.subject}
@@ -202,11 +233,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+                  <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
                     Message *
                   </label>
                   <textarea
-                    id="message"
                     name="message"
                     required
                     rows={5}
@@ -218,21 +248,21 @@ export default function ContactPage() {
                 </div>
 
                 <button
-                  type="submit"
+                  onClick={handleSubmit}
                   disabled={isSubmitting}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-xl transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-blue-600/30 text-sm sm:text-base"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   <Send className="ml-2" size={18} />
                 </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-14 sm:py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
             Need Immediate Assistance?
@@ -242,11 +272,11 @@ export default function ContactPage() {
             Our team is available during business hours to assist you.
           </p>
           <a
-            href="tel:+923052006600"
+            href="tel:+92213432041"
             className="inline-flex items-center bg-white text-blue-900 hover:bg-gray-100 font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-xl transition-colors shadow-xl text-sm sm:text-base"
           >
             <Phone className="mr-2" size={18} />
-            Call Now: 021 3432 0417
+            Call Now: 021-34320417
           </a>
         </div>
       </section>
