@@ -20,18 +20,27 @@ export default function HomePage() {
             <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-6">Who We Are</h2>
             <div className="space-y-2 sm:space-y-4 text-xs sm:text-base text-gray-700 leading-relaxed">
               <p>
-                Ultimate Blend Private Limited is a manufacturer and supplier of construction chemicals whose expertise is providing tailored 
-                products to the customers. Having the best technical resources in the industry, enables us to deliver unique solutions which 
-                are economical and effective. Our proficiency in concrete technology and knowledge of materials is what makes us unique.
+                Established in 1999, Ultimate Blend Private Limited has evolved into a premier manufacturer and supplier 
+                of construction chemicals, proudly catering to diverse industries with quality products manufactured at 
+                our state-of-the-art plant. Our expertise lies in providing tailored solutions that are both economical 
+                and effective, leveraging the best technical resources in the industry.
               </p>
               <p>
-                We design and deliver chemicals for ready-mix concrete producers, cement manufacturers, construction contractors, and 
-                ready-mix suppliers. We make certain that our customers, internal and external, are satisfied with products and services, 
-                and collaborate in mutually valuable relationships with our vendors on a long-term ground.
+                We design and deliver specialized chemicals for ready-mix concrete producers, cement manufacturers, 
+                construction contractors, and ready-mix suppliers. Our proficiency in concrete technology and deep 
+                knowledge of materials enables us to deliver unique solutions that address specific customer requirements.
               </p>
               <p>
-                Our commitment to innovation, quality assurance, and sustainable practices has made us a trusted partner of entire engineering 
-                community associated with the construction industry.
+                Backed by a fully equipped laboratory and rigorous quality control processes, we source raw materials 
+                from quality suppliers worldwide. Our technical personnel work closely with customers to offer excellent 
+                services, product selections, and troubleshooting support, ensuring complete satisfaction for both 
+                internal and external stakeholders.
+              </p>
+              <p>
+                Operating on a customer-first philosophy, we have carved our name in the industry by offering world-class 
+                services and building mutually valuable long-term relationships with vendors and clients alike. Our 
+                commitment to innovation, quality assurance, and sustainable practices has made us a trusted partner 
+                of the entire engineering community associated with the construction industry.
               </p>
             </div>
           </div>
