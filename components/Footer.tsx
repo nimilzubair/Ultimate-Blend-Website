@@ -25,7 +25,7 @@ export default function Footer() {
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               Leading manufacturer of high-performance chemical blends for the construction industry, 
-              delivering quality and innovation since our inception.
+              delivering quality and innovation since 2010.
             </p>
           </div>
 
@@ -62,22 +62,31 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start group">
                 <MapPin className="mr-2 flex-shrink-0 mt-0.5 text-blue-400" size={16} />
-                <span className="text-slate-400 text-sm">Karachi, Pakistan</span>
+                <span className="text-slate-400 text-sm">Plot # E-71, P&T Co-Operative Housing Society, Sector 31-D, Korangi Township, Karachi</span>
               </li>
               <li className="flex items-center group">
                 <Phone className="mr-2 flex-shrink-0 text-blue-400" size={16} />
                 <a 
-                  href="tel:+923052006600" 
+                  href="tel:+92213432041" 
                   className="text-slate-400 hover:text-blue-400 transition-colors text-sm"
                 >
-                  021 3432 0417
+                  021-34320417
+                </a>
+              </li>
+              <li className="flex items-center group">
+                <Phone className="mr-2 flex-shrink-0 text-blue-400" size={16} />
+                <a 
+                  href="tel:+923212000978" 
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm"
+                >
+                  +92 321 2000978
                 </a>
               </li>
               <li className="flex items-center group">
                 <Mail className="mr-2 flex-shrink-0 text-blue-400" size={16} />
                 <a 
-                  href="mailto:info@ultimate-blend.com" 
-                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm"
+                  href="mailto:ultimateblend2025@outlook.com" 
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm break-all"
                 >
                   ultimateblend2025@outlook.com
                 </a>

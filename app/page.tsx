@@ -20,27 +20,28 @@ export default function HomePage() {
             <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-6">Who We Are</h2>
             <div className="space-y-2 sm:space-y-4 text-xs sm:text-base text-gray-700 leading-relaxed">
               <p>
-                Established in 1999, Ultimate Blend Private Limited has evolved into a premier manufacturer and supplier 
-                of construction chemicals, proudly catering to diverse industries with quality products manufactured at 
-                our state-of-the-art plant. Our expertise lies in providing tailored solutions that are both economical 
-                and effective, leveraging the best technical resources in the industry.
+                Established in 2010, Ultimate Blend Private Limited is a manufacturer and supplier of construction 
+                chemicals whose expertise is providing tailored products to the customers. Having the best technical 
+                resources in the industry, enables us to deliver unique solutions which are economical and effective. 
+                Our proficiency in concrete technology and knowledge of materials is what makes us unique.
               </p>
               <p>
-                We design and deliver specialized chemicals for ready-mix concrete producers, cement manufacturers, 
-                construction contractors, and ready-mix suppliers. Our proficiency in concrete technology and deep 
-                knowledge of materials enables us to deliver unique solutions that address specific customer requirements.
+                We design and deliver chemicals to ready-mix concrete producers, cement manufacturers, construction 
+                contractors, and infrastructure developers to help them enhance the performance and durability of 
+                modern construction projects.
               </p>
               <p>
-                Backed by a fully equipped laboratory and rigorous quality control processes, we source raw materials 
-                from quality suppliers worldwide. Our technical personnel work closely with customers to offer excellent 
-                services, product selections, and troubleshooting support, ensuring complete satisfaction for both 
-                internal and external stakeholders.
+                Backed by a fully equipped laboratory at our own premises with a team of qualified engineers and 
+                chemists, Ressichem carries out regular tests to maintain quality of finished products for various 
+                construction & industrial applications. Vigorous onsite support & quality systems allow for 
+                maintaining the quality of our products, as well as solve construction and industrial problems.
               </p>
               <p>
-                Operating on a customer-first philosophy, we have carved our name in the industry by offering world-class 
-                services and building mutually valuable long-term relationships with vendors and clients alike. Our 
-                commitment to innovation, quality assurance, and sustainable practices has made us a trusted partner 
-                of the entire engineering community associated with the construction industry.
+                Operating on a customer first philosophy, Ultimate Blend has carved its name in the ever-demanding 
+                needs of its industry, by offering world class services and fulfilling customer requirements via 
+                quality manufacturing and rigid quality control of products. Our commitment to innovation, quality 
+                assurance, and sustainable practices has made us a trusted partner of entire engineering community 
+                associated with the construction industry.
               </p>
             </div>
           </div>
@@ -52,17 +53,37 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-6 text-center">Management Profile</h2>
-            <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-8 rounded-xl shadow-sm">
-              <div className="space-y-2 sm:space-y-4 text-xs sm:text-base text-gray-700 leading-relaxed">
-                <p>
-                  <span className="font-semibold text-gray-900">Mr. Kamil Ahmed</span>, a chemical engineer with an MBA in marketing, brings extensive domestic and international experience to Ultimate Blends (Pvt) Ltd.
-                </p>
-                <p>
-                  Since 2007, he has accumulated comprehensive expertise in the construction and building materials industry. His distinguished career has progressed from commercial manager to technical manager and technical director.
-                </p>
-                <p>
-                  Mr. Kamil is internationally recognized as a speaker at notable cement conferences, including INTERCEM and CEMTECH, where he shares his knowledge and insights with industry professionals worldwide.
-                </p>
+            <div className="space-y-6">
+              {/* Mr. Faheem Ahmed */}
+              <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-8 rounded-xl shadow-sm">
+                <div className="space-y-2 sm:space-y-4 text-xs sm:text-base text-gray-700 leading-relaxed">
+                  <p>
+                    <span className="font-semibold text-gray-900">Mr. Faheem Ahmed</span> is a seasoned building 
+                    material specialist with over 35 years of extensive hands-on experience in sales and marketing 
+                    within the building materials industry, with a particular focus on cement and construction materials.
+                  </p>
+                  <p>
+                    He has a distinguished career characterized by significant achievements and contributions to the 
+                    industry. He has established a strong online presence as an internationally recognized speaker at 
+                    notable cement conferences, including INTERCEM and CEMTRADE.
+                  </p>
+                </div>
+              </div>
+
+              {/* Mr. M. Kashif */}
+              <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-8 rounded-xl shadow-sm">
+                <div className="space-y-2 sm:space-y-4 text-xs sm:text-base text-gray-700 leading-relaxed">
+                  <p>
+                    <span className="font-semibold text-gray-900">Mr. M. Kashif</span> primarily an engineering 
+                    graduate and an MBA in marketing, has demonstrated his versatile capabilities on multiple avenues 
+                    in the construction and building materials industry since 2007.
+                  </p>
+                  <p>
+                    Starting his career from a commercial geotechnical/material testing laboratories his professional 
+                    experience comprises of associations, at management positions, with different national and 
+                    multinational companies in the cement, ready-mix concrete and construction chemical industries.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -82,7 +103,7 @@ export default function HomePage() {
               </div>
               <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
                 Engineer and formulate intelligent, ecofriendly solutions, for the global construction industry, to 
-                experience a faster and healthier future together.
+                experience a healed and healthier future together.
               </p>
             </div>
             <div className="min-w-[280px] sm:min-w-0 bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -93,8 +114,8 @@ export default function HomePage() {
                 <h2 className="text-lg sm:text-2xl font-bold text-gray-900">Our Mission</h2>
               </div>
               <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
-                Foster a culture that demonstrates happiness, nurtures and supports people to devise and deliver optimally 
-                built products and services to the customers.
+                Foster a culture that disseminates happiness, nurtures and empowers people to devise and deliver 
+                optimally viable products and services to the customers.
               </p>
             </div>
           </div>
@@ -157,7 +178,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-start">
                   <span className="text-blue-600 mr-2 mt-0.5 text-base font-bold">+</span>
-                  <span className="text-xs sm:text-base text-gray-700">Provide reliable performance driven additives</span>
+                  <span className="text-xs sm:text-base text-gray-700">Provide reliable performance driven additives to our customer</span>
                 </div>
                 <div className="flex items-start">
                   <span className="text-blue-600 mr-2 mt-0.5 text-base font-bold">+</span>
@@ -242,7 +263,7 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-6 rounded-xl shadow-sm">
               <div className="flex items-start">
                 <span className="text-blue-600 mr-2 text-base font-bold">+</span>
-                <p className="text-xs sm:text-base text-gray-700">Total solution approach from design mix trials to aftersales</p>
+                <p className="text-xs sm:text-base text-gray-700">Total solution approach from design mix trials to aftersales services</p>
               </div>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-6 rounded-xl shadow-sm">
@@ -254,13 +275,13 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-6 rounded-xl shadow-sm">
               <div className="flex items-start">
                 <span className="text-blue-600 mr-2 text-base font-bold">+</span>
-                <p className="text-xs sm:text-base text-gray-700">Eco-friendly process supporting sustainability goals</p>
+                <p className="text-xs sm:text-base text-gray-700">Ecofriendly process supporting sustainability goals</p>
               </div>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-6 rounded-xl shadow-sm">
               <div className="flex items-start">
                 <span className="text-blue-600 mr-2 text-base font-bold">+</span>
-                <p className="text-xs sm:text-base text-gray-700">Robust technical support for smooth operations</p>
+                <p className="text-xs sm:text-base text-gray-700">A robust technical support backbone for smooth operations</p>
               </div>
             </div>
           </div>
@@ -278,20 +299,16 @@ export default function HomePage() {
                 <h3 className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2 text-gray-900">Mr. Faheem Ahmed</h3>
                 <p className="text-blue-600 font-semibold mb-2 sm:mb-4 text-xs sm:text-base">Chief Executive Officer</p>
                 <p className="text-xs sm:text-base text-gray-700 leading-relaxed max-w-2xl mx-auto mb-3">
-                  A seasoned building material specialist with over 35 years of extensive experience in sales and marketing. Since 2018, he has led the Trading business with DGKCL.
+                  A seasoned building material specialist with over 35 years of extensive hands-on experience in sales and marketing within the building materials industry, with a particular focus on cement and construction materials.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 max-w-2xl mx-auto">
-                  <div className="bg-white/60 backdrop-blur-sm border border-blue-200 p-3 rounded-xl">
-                    <p className="text-[10px] sm:text-xs font-semibold text-gray-900 mb-1">Education</p>
-                    <p className="text-[10px] sm:text-xs text-gray-700">MBA in Marketing, Preston University Karachi</p>
-                  </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 max-w-2xl mx-auto">
                   <div className="bg-white/60 backdrop-blur-sm border border-blue-200 p-3 rounded-xl">
                     <p className="text-[10px] sm:text-xs font-semibold text-gray-900 mb-1">Recognition</p>
                     <p className="text-[10px] sm:text-xs text-gray-700">International speaker at INTERCEM & CEMTRADE</p>
                   </div>
                   <div className="bg-white/60 backdrop-blur-sm border border-blue-200 p-3 rounded-xl">
-                    <p className="text-[10px] sm:text-xs font-semibold text-gray-900 mb-1">Network</p>
-                    <p className="text-[10px] sm:text-xs text-gray-700">1,700+ LinkedIn followers</p>
+                    <p className="text-[10px] sm:text-xs font-semibold text-gray-900 mb-1">Experience</p>
+                    <p className="text-[10px] sm:text-xs text-gray-700">35+ years in building materials industry</p>
                   </div>
                 </div>
               </div>
@@ -305,16 +322,16 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">14+</div>
+              <div className="text-2xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">15+</div>
               <div className="text-[10px] sm:text-sm text-gray-600 font-medium">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">500+</div>
-              <div className="text-[10px] sm:text-sm text-gray-600 font-medium">Projects Completed</div>
+              <div className="text-2xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">100+</div>
+              <div className="text-[10px] sm:text-sm text-gray-600 font-medium">Satisfied Clients</div>
             </div>
             <div className="text-center">
               <div className="text-2xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">ISO</div>
-              <div className="text-[10px] sm:text-sm text-gray-600 font-medium">Certified Facilities</div>
+              <div className="text-[10px] sm:text-sm text-gray-600 font-medium">Certified Facility</div>
             </div>
             <div className="text-center">
               <div className="text-2xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">100%</div>

@@ -104,6 +104,9 @@ export default function ContactPage() {
                     <a href="tel:+92213432041" className="text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base block">
                       021-34320417
                     </a>
+                    <a href="tel:+923212000978" className="text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base block mt-1">
+                      +92 321 2000978
+                    </a>
                   </div>
                 </div>
 
@@ -271,13 +274,22 @@ export default function ContactPage() {
             For urgent inquiries or technical support, please call us directly. 
             Our team is available during business hours to assist you.
           </p>
-          <a
-            href="tel:+92213432041"
-            className="inline-flex items-center bg-white text-blue-900 hover:bg-gray-100 font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-xl transition-colors shadow-xl text-sm sm:text-base"
-          >
-            <Phone className="mr-2" size={18} />
-            Call Now: 021-34320417
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            
+              href="tel:+92213432041"
+              className="inline-flex items-center bg-white text-blue-900 hover:bg-gray-100 font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-xl transition-colors shadow-xl text-sm sm:text-base"
+            <a>
+              <Phone className="mr-2" size={18} />
+              Call: 021-34320417
+            </a>
+            
+              href="tel:+923212000978"
+              className="inline-flex items-center bg-white text-blue-900 hover:bg-gray-100 font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-xl transition-colors shadow-xl text-sm sm:text-base"
+            <a>
+              <Phone className="mr-2" size={18} />
+              Call: +92 321 2000978
+            </a>
+          </div>
         </div>
       </section>
     </div>
