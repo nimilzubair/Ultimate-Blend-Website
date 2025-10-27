@@ -31,26 +31,25 @@ export default function ContactPage() {
     });
   };
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const handleSubmit = async (e: FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  setSubmitSuccess(false);
 
-    const subject = encodeURIComponent(`${formData.subject} - Contact Form`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone}\n` +
-      `Company: ${formData.company}\n` +
-      `Subject: ${formData.subject}\n\n` +
-      `Message:\n${formData.message}`
-    );
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
 
-    window.location.href = `mailto:ultimateblend2025@outlook.com?subject=${subject}&body=${body}`;
-    
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
-    
-    setTimeout(() => {
+    const result = await response.json();
+
+    if (response.ok) {
+      setSubmitSuccess(true);
+      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -59,9 +58,16 @@ export default function ContactPage() {
         subject: '',
         message: ''
       });
-      setSubmitSuccess(false);
-    }, 3000);
-  };
+    } else {
+      alert(result.message || 'Failed to send message. Please try again.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Failed to send message. Please try again.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <div className="bg-white">
@@ -160,7 +166,7 @@ export default function ContactPage() {
                 <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-5 sm:mb-6 flex items-center">
                   <CheckCircle className="text-green-600 mr-3 flex-shrink-0" size={22} />
                   <p className="text-green-800 text-xs sm:text-sm">
-                    Your email client has been opened. Please send the email to complete your message.
+                    Your message has been sent successfully! We'll get back to you soon.
                   </p>
                 </div>
               )}
