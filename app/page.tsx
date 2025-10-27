@@ -1,20 +1,55 @@
+import Image from "next/image";
 import { Target, Users, Award, TrendingUp, CheckCircle } from "lucide-react";
 
 export default function HomePage() {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-10 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4">About Us</h1>
-          <p className="text-xs sm:text-base lg:text-lg text-blue-100 max-w-3xl leading-relaxed">
-            Performance Driven Consistency, Total Solution Excellence & Sustainable Innovation
-          </p>
-        </div>
-      </section>
+      {/* Hero Section - Image Slider */}
+<section className="relative h-[60vh] sm:h-[75vh] overflow-hidden">
+  <div className="absolute inset-0">
+    <div className="w-full h-full">
+      <Image
+        src="/hero-lab.jpg"
+        alt="Chemical Laboratory"
+        fill
+        className="object-cover"
+        priority
+      />
+    </div>
+  </div>
+  <div className="absolute inset-0 bg-white/60 backdrop-blur-sm flex flex-col items-center justify-center text-center px-4">
+    {/* Logo and Company Name */}
+    <div className="mb-6 flex flex-col items-center">
+      <div className="relative w-32 h-32 sm:w-40 sm:h-40 mb-4">
+        <Image
+          src="/logo.png"
+          alt="Ultimate Blend Logo"
+          fill
+          className="object-contain"
+          priority
+        />
+      </div>
+      <div className="text-4xl sm:text-6xl font-bold text-gray-900 mb-2">
+        Ultimate Blend
+      </div>
+      <div className="text-lg sm:text-xl text-gray-800 font-medium">
+        Private Limited
+      </div>
+    </div>
+    <p className="text-gray-900 text-sm sm:text-lg max-w-2xl leading-relaxed mb-6 font-semibold">
+      Performance Driven Consistency, Total Solution Excellence & Sustainable Innovation
+    </p>
+    <a
+      href="#about"
+      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg text-sm sm:text-base transition"
+    >
+      Learn More
+    </a>
+  </div>
+</section>
 
       {/* Company Overview */}
-      <section className="py-10 sm:py-16 bg-gray-50">
+      <section id="about" className="py-10 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-6">Who We Are</h2>
@@ -91,10 +126,16 @@ export default function HomePage() {
       </section>
 
       {/* Vision & Mission - Horizontal Scroll on Mobile */}
-      <section className="py-10 sm:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-10 sm:py-16 bg-gray-50 overflow-hidden">
+        <Image
+          src="/vision-mission.jpg"
+          alt="Vision and Mission"
+          fill
+          className="object-cover opacity-10 absolute inset-0"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex overflow-x-auto pb-4 space-x-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-x-0 max-w-5xl mx-auto">
-            <div className="min-w-[280px] sm:min-w-0 bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="min-w-[280px] sm:min-w-0 bg-white/80 backdrop-blur-sm border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-3">
                 <div className="bg-blue-600 p-2 rounded-lg mr-3">
                   <Target className="text-white" size={18} />
@@ -106,7 +147,7 @@ export default function HomePage() {
                 experience a healed and healthier future together.
               </p>
             </div>
-            <div className="min-w-[280px] sm:min-w-0 bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="min-w-[280px] sm:min-w-0 bg-white/80 backdrop-blur-sm border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-3">
                 <div className="bg-blue-600 p-2 rounded-lg mr-3">
                   <CheckCircle className="text-white" size={18} />
@@ -162,11 +203,17 @@ export default function HomePage() {
       </section>
 
       {/* Our Expert Services */}
-      <section className="py-10 sm:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-10 sm:py-16 bg-gray-50 overflow-hidden">
+        <Image
+          src="/services.jpg"
+          alt="Industrial Services"
+          fill
+          className="object-cover opacity-10 absolute inset-0"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl sm:text-3xl font-bold text-center text-gray-900 mb-6 sm:mb-12">Our Expert Services</h2>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-8 rounded-xl shadow-sm">
+            <div className="bg-white/80 backdrop-blur-sm border border-blue-100 p-4 sm:p-8 rounded-xl shadow-sm">
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-start">
                   <span className="text-blue-600 mr-2 mt-0.5 text-base font-bold">+</span>
@@ -282,35 +329,6 @@ export default function HomePage() {
               <div className="flex items-start">
                 <span className="text-blue-600 mr-2 text-base font-bold">+</span>
                 <p className="text-xs sm:text-base text-gray-700">A robust technical support backbone for smooth operations</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-10 sm:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-xl sm:text-3xl font-bold mb-4 sm:mb-8 text-center text-gray-900">Chief Executive Officer</h2>
-            <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-8 rounded-2xl shadow-lg">
-              <div className="text-center">
-                <div className="w-20 h-20 sm:w-32 sm:h-32 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl mx-auto mb-3 sm:mb-6 shadow-lg"></div>
-                <h3 className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2 text-gray-900">Mr. Faheem Ahmed</h3>
-                <p className="text-blue-600 font-semibold mb-2 sm:mb-4 text-xs sm:text-base">Chief Executive Officer</p>
-                <p className="text-xs sm:text-base text-gray-700 leading-relaxed max-w-2xl mx-auto mb-3">
-                  A seasoned building material specialist with over 35 years of extensive hands-on experience in sales and marketing within the building materials industry, with a particular focus on cement and construction materials.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 max-w-2xl mx-auto">
-                  <div className="bg-white/60 backdrop-blur-sm border border-blue-200 p-3 rounded-xl">
-                    <p className="text-[10px] sm:text-xs font-semibold text-gray-900 mb-1">Recognition</p>
-                    <p className="text-[10px] sm:text-xs text-gray-700">International speaker at INTERCEM & CEMTRADE</p>
-                  </div>
-                  <div className="bg-white/60 backdrop-blur-sm border border-blue-200 p-3 rounded-xl">
-                    <p className="text-[10px] sm:text-xs font-semibold text-gray-900 mb-1">Experience</p>
-                    <p className="text-[10px] sm:text-xs text-gray-700">35+ years in building materials industry</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
