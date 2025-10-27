@@ -1,11 +1,12 @@
+"use client";
 import Image from "next/image";
 import { Target, Users, Award, TrendingUp, CheckCircle } from "lucide-react";
 
 export default function HomePage() {
   return (
     <div className="bg-white">
-      {/* Hero Section - Image Slider */}
-      <section className="relative h-[60vh] sm:h-[75vh] overflow-hidden">
+      {/* Hero Section - Full Page */}
+      <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
           <div className="w-full h-full">
             <Image
@@ -208,31 +209,33 @@ export default function HomePage() {
           src="/services.jpg"
           alt="Industrial Services"
           fill
-          className="object-cover opacity-10 absolute inset-0"
+          className="object-cover opacity-30 absolute inset-0"
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl sm:text-3xl font-bold text-center text-gray-900 mb-6 sm:mb-12">Our Expert Services</h2>
+          <h2 className="text-xl sm:text-3xl font-bold text-center text-gray-900 mb-6 sm:mb-12">
+            Our Expert Services
+          </h2>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white/80 backdrop-blur-sm border border-blue-100 p-4 sm:p-8 rounded-xl shadow-sm">
-              <div className="grid grid-cols-1 gap-2">
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2 mt-0.5 text-base font-bold">+</span>
+            <div className="bg-white/20 backdrop-blur-sm border border-blue-100/30 p-4 sm:p-8 rounded-xl shadow-sm">
+              <div className="grid grid-cols-1 gap-3 sm:gap-4">
+                <div className="flex items-start animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                   <span className="text-xs sm:text-base text-gray-700">Chemicals supplies</span>
                 </div>
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2 mt-0.5 text-base font-bold">+</span>
+                <div className="flex items-start animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                   <span className="text-xs sm:text-base text-gray-700">Concrete mix design consultation</span>
                 </div>
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2 mt-0.5 text-base font-bold">+</span>
+                <div className="flex items-start animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                   <span className="text-xs sm:text-base text-gray-700">Provide reliable performance driven additives to our customer</span>
                 </div>
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2 mt-0.5 text-base font-bold">+</span>
+                <div className="flex items-start animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                   <span className="text-xs sm:text-base text-gray-700">Ensure consistent quality</span>
                 </div>
-                <div className="flex items-start">
-                  <span className="text-blue-600 mr-2 mt-0.5 text-base font-bold">+</span>
+                <div className="flex items-start animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                   <span className="text-xs sm:text-base text-gray-700">Confirmed timely deliveries</span>
                 </div>
               </div>
@@ -358,6 +361,24 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <style jsx global>{`
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(15px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fade-in-up 0.6s ease-out forwards;
+          opacity: 0;
+        }
+      `}</style>
     </div>
   );
 }
