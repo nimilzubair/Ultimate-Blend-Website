@@ -5,48 +5,48 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       {/* Hero Section - Image Slider */}
-<section className="relative h-[60vh] sm:h-[75vh] overflow-hidden">
-  <div className="absolute inset-0">
-    <div className="w-full h-full">
-      <Image
-        src="/hero-lab.jpg"
-        alt="Chemical Laboratory"
-        fill
-        className="object-cover"
-        priority
-      />
-    </div>
-  </div>
-  <div className="absolute inset-0 bg-white/60 backdrop-blur-sm flex flex-col items-center justify-center text-center px-4">
-    {/* Logo and Company Name */}
-    <div className="mb-6 flex flex-col items-center">
-      <div className="relative w-32 h-32 sm:w-40 sm:h-40 mb-4">
-        <Image
-          src="/logo.png"
-          alt="Ultimate Blend Logo"
-          fill
-          className="object-contain"
-          priority
-        />
-      </div>
-      <div className="text-4xl sm:text-6xl font-bold text-gray-900 mb-2">
-        Ultimate Blend
-      </div>
-      <div className="text-lg sm:text-xl text-gray-800 font-medium">
-        Private Limited
-      </div>
-    </div>
-    <p className="text-gray-900 text-sm sm:text-lg max-w-2xl leading-relaxed mb-6 font-semibold">
-      Performance Driven Consistency, Total Solution Excellence & Sustainable Innovation
-    </p>
-    <a
-      href="#about"
-      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg text-sm sm:text-base transition"
-    >
-      Learn More
-    </a>
-  </div>
-</section>
+      <section className="relative h-[60vh] sm:h-[75vh] overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="w-full h-full">
+            <Image
+              src="/hero-lab.jpg"
+              alt="Chemical Laboratory"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm flex flex-col items-center justify-center text-center px-4">
+          {/* Logo and Company Name */}
+          <div className="mb-6 flex flex-col items-center">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 mb-4">
+              <Image
+                src="/logo.png"
+                alt="Ultimate Blend Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className="text-4xl sm:text-6xl font-bold text-gray-900 mb-2">
+              Ultimate Blend
+            </div>
+            <div className="text-lg sm:text-xl text-gray-800 font-medium">
+              Private Limited
+            </div>
+          </div>
+          <p className="text-gray-900 text-sm sm:text-lg max-w-2xl leading-relaxed mb-6 font-semibold">
+            Performance Driven Consistency, Total Solution Excellence &amp; Sustainable Innovation
+          </p>
+          <a
+            href="#about"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg text-sm sm:text-base transition"
+          >
+            Learn More
+          </a>
+        </div>
+      </section>
 
       {/* Company Overview */}
       <section id="about" className="py-10 sm:py-16 bg-gray-50">
@@ -68,7 +68,7 @@ export default function HomePage() {
               <p>
                 Backed by a fully equipped laboratory at our own premises with a team of qualified engineers and 
                 chemists, Ressichem carries out regular tests to maintain quality of finished products for various 
-                construction & industrial applications. Vigorous onsite support & quality systems allow for 
+                construction &amp; industrial applications. Vigorous onsite support &amp; quality systems allow for 
                 maintaining the quality of our products, as well as solve construction and industrial problems.
               </p>
               <p>
@@ -298,7 +298,7 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-6 rounded-xl shadow-sm">
               <div className="flex items-start">
                 <span className="text-blue-600 mr-2 text-base font-bold">+</span>
-                <p className="text-xs sm:text-base text-gray-700">Affordable cost & high performance efficiency</p>
+                <p className="text-xs sm:text-base text-gray-700">Affordable cost &amp; high performance efficiency</p>
               </div>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-6 rounded-xl shadow-sm">

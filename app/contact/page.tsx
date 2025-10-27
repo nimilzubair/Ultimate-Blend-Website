@@ -1,10 +1,19 @@
 'use client';
 
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  subject: string;
+  message: string;
+}
+
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
@@ -15,14 +24,14 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -63,7 +72,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-sm sm:text-base lg:text-lg text-blue-100 max-w-2xl leading-relaxed">
-            Get in touch with our team. We're here to answer your questions and help you 
+            Get in touch with our team. We&apos;re here to answer your questions and help you 
             find the right solutions for your needs.
           </p>
         </div>
@@ -89,7 +98,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">Office Address</h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                      Plot # E-71, P&T Co-Operative Housing Society,<br />
+                      Plot # E-71, P&amp;T Co-Operative Housing Society,<br />
                       Sector 31-D, Korangi Township, Karachi
                     </p>
                   </div>
@@ -156,7 +165,7 @@ export default function ContactPage() {
                 </div>
               )}
 
-              <div className="space-y-4 sm:space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                 <div>
                   <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
                     Full Name *
@@ -251,14 +260,14 @@ export default function ContactPage() {
                 </div>
 
                 <button
-                  onClick={handleSubmit}
+                  type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-xl transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-blue-600/30 text-sm sm:text-base"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   <Send className="ml-2" size={18} />
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -275,17 +284,17 @@ export default function ContactPage() {
             Our team is available during business hours to assist you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            
+            <a
               href="tel:+92213432041"
               className="inline-flex items-center bg-white text-blue-900 hover:bg-gray-100 font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-xl transition-colors shadow-xl text-sm sm:text-base"
-            <a>
+            >
               <Phone className="mr-2" size={18} />
               Call: 021-34320417
             </a>
-            
+            <a
               href="tel:+923212000978"
               className="inline-flex items-center bg-white text-blue-900 hover:bg-gray-100 font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-xl transition-colors shadow-xl text-sm sm:text-base"
-            <a>
+            >
               <Phone className="mr-2" size={18} />
               Call: +92 321 2000978
             </a>
