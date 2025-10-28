@@ -49,121 +49,128 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Company Overview */}
-      <section id="about" className="py-10 sm:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-6">Who We Are</h2>
-            <div className="space-y-2 sm:space-y-4 text-xs sm:text-base text-gray-700 leading-relaxed">
-              <p>
-                Established in 2010, Ultimate Blend Private Limited is a manufacturer and supplier of construction 
-                chemicals whose expertise is providing tailored products to the customers. Having the best technical 
-                resources in the industry, enables us to deliver unique solutions which are economical and effective. 
-                Our proficiency in concrete technology and knowledge of materials is what makes us unique.
-              </p>
-              <p>
-                We design and deliver chemicals to ready-mix concrete producers, cement manufacturers, construction 
-                contractors, and infrastructure developers to help them enhance the performance and durability of 
-                modern construction projects.
-              </p>
-              <p>
-                Backed by a fully equipped laboratory at our own premises with a team of qualified engineers and 
-                chemists, Ressichem carries out regular tests to maintain quality of finished products for various 
-                construction &amp; industrial applications. Vigorous onsite support &amp; quality systems allow for 
-                maintaining the quality of our products, as well as solve construction and industrial problems.
-              </p>
-              <p>
-                Operating on a customer first philosophy, Ultimate Blend has carved its name in the ever-demanding 
-                needs of its industry, by offering world class services and fulfilling customer requirements via 
-                quality manufacturing and rigid quality control of products. Our commitment to innovation, quality 
-                assurance, and sustainable practices has made us a trusted partner of entire engineering community 
-                associated with the construction industry.
-              </p>
-            </div>
+    {/* Company Overview */}
+<section id="about" className="py-10 sm:py-16 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-6xl mx-auto">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        {/* Text Content */}
+        <div>
+          <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-6">Who We Are</h2>
+          <div className="space-y-4 text-sm sm:text-base text-gray-700 leading-relaxed">
+            <p>
+              Established in 2010, Ultimate Blend Private Limited is a manufacturer and supplier of construction 
+              chemicals whose expertise is providing tailored products to the customers. Having the best technical 
+              resources in the industry, enables us to deliver unique solutions which are economical and effective. 
+              Our proficiency in concrete technology and knowledge of materials is what makes us unique.
+            </p>
+            <p>
+              We design and deliver chemicals to ready-mix concrete producers, cement manufacturers, construction 
+              contractors, and infrastructure developers to help them enhance the performance and durability of 
+              modern construction projects.
+            </p>
+            <p>
+              Backed by a fully equipped laboratory at our own premises with a team of qualified engineers and 
+              chemists, we carry out regular tests to maintain quality of finished products for various 
+              construction & industrial applications. Vigorous onsite support & quality systems allow for 
+              maintaining the quality of our products, as well as solve construction and industrial problems.
+            </p>
+            <p>
+              Operating on a customer first philosophy, Ultimate Blend has carved its name in the ever-demanding 
+              needs of its industry, by offering world class services and fulfilling customer requirements via 
+              quality manufacturing and rigid quality control of products.
+            </p>
           </div>
         </div>
-      </section>
+
+        {/* Image */}
+        <div className="relative h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden shadow-md">
+          <Image
+            src="/chem-lab.jpg"
+            alt="Ultimate Blend Chemical Laboratory"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Management Profile */}
-      <section className="py-10 sm:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-6 text-center">Management Profile</h2>
-            <div className="space-y-6">
-              {/* Mr. Faheem Ahmed */}
-              <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-8 rounded-xl shadow-sm">
-                <div className="space-y-2 sm:space-y-4 text-xs sm:text-base text-gray-700 leading-relaxed">
-                  <p>
-                    <span className="font-semibold text-gray-900">Mr. Faheem Ahmed</span> is a seasoned building 
-                    material specialist with over 35 years of extensive hands-on experience in sales and marketing 
-                    within the building materials industry, with a particular focus on cement and construction materials.
-                  </p>
-                  <p>
-                    He has a distinguished career characterized by significant achievements and contributions to the 
-                    industry. He has established a strong online presence as an internationally recognized speaker at 
-                    notable cement conferences, including INTERCEM and CEMTRADE.
-                  </p>
-                </div>
-              </div>
-
-              {/* Mr. M. Kashif */}
-              <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 p-4 sm:p-8 rounded-xl shadow-sm">
-                <div className="space-y-2 sm:space-y-4 text-xs sm:text-base text-gray-700 leading-relaxed">
-                  <p>
-                    <span className="font-semibold text-gray-900">Mr. M. Kashif</span> primarily an engineering 
-                    graduate and an MBA in marketing, has demonstrated his versatile capabilities on multiple avenues 
-                    in the construction and building materials industry since 2007.
-                  </p>
-                  <p>
-                    Starting his career from a commercial geotechnical/material testing laboratories his professional 
-                    experience comprises of associations, at management positions, with different national and 
-                    multinational companies in the cement, ready-mix concrete and construction chemical industries.
-                  </p>
-                </div>
-              </div>
-            </div>
+<section className="py-10 sm:py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">Management Profile</h2>
+      
+      {/* Horizontal scroll on mobile, grid on desktop */}
+      <div className="flex overflow-x-auto pb-6 space-x-6 sm:grid sm:grid-cols-2 sm:gap-8 sm:space-x-0">
+        {/* Mr. Faheem Ahmed */}
+        <div className="min-w-[300px] sm:min-w-0 bg-white border border-gray-200 p-6 rounded-lg flex-shrink-0">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Mr. Faheem Ahmed</h3>
+          <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+            <p>
+              Seasoned building material specialist with over 35 years of extensive hands-on experience in sales and marketing within the building materials industry.
+            </p>
+            <p>
+              Distinguished career with significant achievements and contributions to the industry. Internationally recognized speaker at notable cement conferences including INTERCEM and CEMTRADE.
+            </p>
           </div>
         </div>
-      </section>
 
-      {/* Vision & Mission - Horizontal Scroll on Mobile */}
-      <section className="relative py-10 sm:py-16 bg-gray-50 overflow-hidden">
-        <Image
-          src="/vision-mission.jpg"
-          alt="Vision and Mission"
-          fill
-          className="object-cover opacity-10 absolute inset-0"
-        />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto pb-4 space-x-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-x-0 max-w-5xl mx-auto">
-            <div className="min-w-[280px] sm:min-w-0 bg-white/80 backdrop-blur-sm border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-3">
-                <div className="bg-blue-600 p-2 rounded-lg mr-3">
-                  <Target className="text-white" size={18} />
-                </div>
-                <h2 className="text-lg sm:text-2xl font-bold text-gray-900">Our Vision</h2>
-              </div>
-              <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
-                Engineer and formulate intelligent, ecofriendly solutions, for the global construction industry, to 
-                experience a healed and healthier future together.
-              </p>
-            </div>
-            <div className="min-w-[280px] sm:min-w-0 bg-white/80 backdrop-blur-sm border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-3">
-                <div className="bg-blue-600 p-2 rounded-lg mr-3">
-                  <CheckCircle className="text-white" size={18} />
-                </div>
-                <h2 className="text-lg sm:text-2xl font-bold text-gray-900">Our Mission</h2>
-              </div>
-              <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
-                Foster a culture that disseminates happiness, nurtures and empowers people to devise and deliver 
-                optimally viable products and services to the customers.
-              </p>
-            </div>
+        {/* Mr. M. Kashif */}
+        <div className="min-w-[300px] sm:min-w-0 bg-white border border-gray-200 p-6 rounded-lg flex-shrink-0">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Mr. M. Kashif</h3>
+          <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+            <p>
+              Engineering graduate and MBA in marketing with versatile capabilities demonstrated across multiple avenues in construction and building materials industry since 2007.
+            </p>
+            <p>
+              Professional experience includes associations at management positions with different national and multinational companies in cement, ready-mix concrete and construction chemical industries.
+            </p>
           </div>
         </div>
-      </section>
-
+      </div>
+    </div>
+  </div>
+</section>
+     {/* Vision & Mission - Horizontal Scroll on Mobile */}
+<section className="relative py-10 sm:py-16 bg-gray-50 overflow-hidden">
+  <Image
+    src="/vision-mission.jpg"
+    alt="Vision and Mission"
+    fill
+    className="object-cover opacity-20 absolute inset-0" 
+  />
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex overflow-x-auto pb-4 space-x-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-x-0 max-w-5xl mx-auto">
+      <div className="min-w-[280px] sm:min-w-0 bg-white/40 backdrop-blur-sm border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"> {/* Reduced opacity to 40% */}
+        <div className="flex items-center mb-3">
+          <div className="bg-blue-600 p-2 rounded-lg mr-3">
+            <Target className="text-white" size={18} />
+          </div>
+          <h2 className="text-lg sm:text-2xl font-bold text-gray-900">Our Vision</h2>
+        </div>
+        <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
+          Engineer and formulate intelligent, ecofriendly solutions, for the global construction industry, to 
+          experience a healed and healthier future together.
+        </p>
+      </div>
+      <div className="min-w-[280px] sm:min-w-0 bg-white/40 backdrop-blur-sm border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"> {/* Reduced opacity to 40% */}
+        <div className="flex items-center mb-3">
+          <div className="bg-blue-600 p-2 rounded-lg mr-3">
+            <CheckCircle className="text-white" size={18} />
+          </div>
+          <h2 className="text-lg sm:text-2xl font-bold text-gray-900">Our Mission</h2>
+        </div>
+        <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
+          Foster a culture that disseminates happiness, nurtures and empowers people to devise and deliver 
+          optimally viable products and services to the customers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       {/* Core Values - Horizontal Scroll on Mobile */}
       <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
