@@ -351,29 +351,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-10 sm:py-16 bg-white border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="text-2xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">15+</div>
-              <div className="text-[10px] sm:text-sm text-gray-600 font-medium">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">100+</div>
-              <div className="text-[10px] sm:text-sm text-gray-600 font-medium">Satisfied Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">ISO</div>
-              <div className="text-[10px] sm:text-sm text-gray-600 font-medium">Certified Facility</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">100%</div>
-              <div className="text-[10px] sm:text-sm text-gray-600 font-medium">Quality Assured</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <style jsx global>{`
         @keyframes fade-in-up {
