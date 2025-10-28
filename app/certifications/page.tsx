@@ -3,17 +3,28 @@ import Image from "next/image";
 export default function CertificationsPage() {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-12 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-5xl font-bold mb-3 sm:mb-4">
-            Certifications & Quality
-          </h1>
-          <p className="text-base sm:text-lg text-blue-100 max-w-2xl">
-            Committed to the highest standards of quality, safety, and environmental responsibility
-          </p>
-        </div>
-      </section>
+{/* Hero Section */}
+<section className="relative text-white py-12 sm:py-16 lg:py-28 overflow-hidden">
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-800 via-gray-800 to-blue-900">
+    <div className="absolute inset-0 bg-[url('/hero-certificate.jpg')] bg-cover bg-center opacity-50"></div>
+  </div>
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 text-center z-10">
+    <div className="inline-block mb-2 sm:mb-4 px-3 py-1 sm:px-4 sm:py-1.5 bg-blue-600/40 backdrop-blur-sm rounded-full border border-blue-300/40">
+      <span className="text-xs sm:text-sm font-medium text-white">
+        ISO Certified
+      </span>
+    </div>
+    <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-3 sm:mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+      Certifications & Quality
+    </h1>
+    <p className="text-sm sm:text-base lg:text-lg max-w-3xl mx-auto text-gray-100 leading-relaxed">
+      Committed to the highest standards of quality, safety, and environmental responsibility
+    </p>
+  </div>
+</section>
 
       {/* Quality Overview */}
       <section className="py-10 sm:py-16 bg-gray-50">
