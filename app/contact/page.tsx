@@ -72,13 +72,24 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
+      <section className="relative text-white py-12 sm:py-16 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-800 via-gray-800 to-blue-900">
+          <div className="absolute inset-0 bg-[url('/hero-contact.jpg')] bg-cover bg-center opacity-50"></div>
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 text-center z-10">
+          <div className="inline-block mb-2 sm:mb-4 px-3 py-1 sm:px-4 sm:py-1.5 bg-blue-600/40 backdrop-blur-sm rounded-full border border-blue-300/40">
+            <span className="text-xs sm:text-sm font-medium text-white">
+              Get In Touch
+            </span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-3 sm:mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Contact Us
           </h1>
-          <p className="text-sm sm:text-base lg:text-lg text-blue-100 max-w-2xl leading-relaxed">
-            Get in touch with our team. We&apos;re here to answer your questions and help you 
+          <p className="text-sm sm:text-base lg:text-lg max-w-3xl mx-auto text-gray-100 leading-relaxed">
+            Get in touch with our team. We're here to answer your questions and help you 
             find the right solutions for your needs.
           </p>
         </div>
@@ -166,7 +177,7 @@ export default function ContactPage() {
                 <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-5 sm:mb-6 flex items-center">
                   <CheckCircle className="text-green-600 mr-3 flex-shrink-0" size={22} />
                   <p className="text-green-800 text-xs sm:text-sm">
-                    Your message has been sent successfully! We&apos;ll get back to you soon.
+                    Your message has been sent successfully! We'll get back to you soon.
                   </p>
                 </div>
               )}
