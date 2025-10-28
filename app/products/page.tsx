@@ -1,142 +1,251 @@
-import ProductCard from '@/components/ProductCard';
+"use client";
+import React from "react";
 
 export default function ProductsPage() {
   const productCategories = [
     {
       title: "Concrete Admixtures",
+      bgImage: "/concrete-mix.png",
       products: [
         "High strength super plasticizer",
         "Polycarboxylate based plasticizer",
         "Slump retention admixtures",
         "Air entraining admixture",
-        "Shotcrete Accelerator"
-      ]
+        "Shotcrete Accelerator",
+      ],
     },
     {
       title: "Cement Additives",
+      bgImage: "/cement-prod.jpg",
       products: [
         "Improved grinding efficiency",
         "Reduce energy cost",
-        "Improved durability and performance"
-      ]
+        "Improved durability",
+        "Enhanced performance",
+        "Sustainable solutions",
+      ],
     },
     {
       title: "Tile Adhesives & Grouts",
+      bgImage: "/tile-prod.png",
       products: [
         "Standard grade adhesives",
-        "Better adhesion than traditional cement mortar",
-        "Reduced shrinkage and hollowness",
-        "Suitable for interior and exterior use"
-      ]
+        "Superior adhesion strength",
+        "Reduced shrinkage",
+        "Interior & exterior use",
+        "Long-lasting performance",
+      ],
     },
     {
       title: "Cementitious Grouts",
+      bgImage: "/cementous-grout.webp",
       products: [
         "Restricted grout",
-        "General purpose non-shrink grout",
-        "Bearing / Bedding grout"
-      ]
+        "Non-shrink grout",
+        "Bearing grout",
+        "Bedding grout",
+        "High-flow options",
+      ],
     },
     {
       title: "Waterproofing Solutions",
+      bgImage: "/Waterproofing-Products.webp",
       products: [
-        "Crystalline capillary coating",
-        "Integral waterproofing admixture",
-        "Powder based waterproofing",
-        "Crystalline waterproofing admixture"
-      ]
+        "Crystalline coating",
+        "Integral waterproofing",
+        "Powder-based systems",
+        "Capillary admixtures",
+        "Complete protection",
+      ],
     },
     {
       title: "Joint Sealants",
+      bgImage: "/joint-prod.webp",
       products: [
         "Polyurethane sealant",
-        "Polysulphides sealant",
-        "High-performance sealing solutions"
-      ]
+        "Polysulphide sealant",
+        "Weather resistance",
+        "High-performance sealing",
+        "Durable solutions",
+      ],
     },
     {
       title: "Shotcrete Accelerators",
+      bgImage: "/shotcrete-prod.jpg",
       products: [
-        "Environmentally friendly and safer to handle",
-        "Suitable for dry and wet mix shotcrete",
-        "Long-term durability guaranteed"
-      ]
+        "Eco-friendly formula",
+        "Safe handling",
+        "Dry & wet mix compatible",
+        "Long-term durability",
+        "Rapid setting time",
+      ],
     },
     {
       title: "Industrial Flooring",
+      bgImage: "/flooring.png",
       products: [
-        "Non-metallic floor hardener",
+        "Non-metallic hardener",
         "Acrylic floor sealer",
-        "Self-leveling epoxy resin coating",
-        "Epoxy based mortar"
-      ]
+        "Self-leveling epoxy",
+        "Epoxy mortar",
+        "Heavy-duty coating",
+      ],
     },
     {
       title: "Industrial Chemicals",
+      bgImage: "/indus-chem-prod.png",
       products: [
-        "Pharmaceuticals, Agriculture, Sugar Mills",
-        "Textile, Foods, Fertilizer industries",
-        "Construction & Water Treatment",
-        "Specialty chemical solutions"
-      ]
-    }
+        "Pharmaceutical grade",
+        "Agricultural solutions",
+        "Textile applications",
+        "Water treatment",
+        "Specialty chemicals",
+      ],
+    },
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">Our Products</h1>
-          <p className="text-sm sm:text-base lg:text-lg text-blue-100 max-w-3xl leading-relaxed">
-            Since 2010, delivering reliable, high-quality outcomes through focused effort, end-to-end solutions, 
-            and green credentials for the construction ecosystem. Backed by fully equipped laboratories and qualified engineers.
+      <section className="relative text-white py-12 sm:py-16 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-gray-800 to-blue-950">
+          <div className="absolute inset-0 bg-[url('/cement-additive.jpg')] bg-cover bg-center opacity-20"></div>
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 text-center z-10">
+          <div className="inline-block mb-2 sm:mb-4 px-3 py-1 sm:px-4 sm:py-1.5 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
+            <span className="text-xs sm:text-sm font-medium text-blue-200">
+              Since 2010
+            </span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-3 sm:mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            Our Products
+          </h1>
+          <p className="text-sm sm:text-base lg:text-lg max-w-3xl mx-auto text-gray-200 leading-relaxed">
+            Delivering reliable, high-quality outcomes through focused effort,
+            end-to-end solutions, and green credentials for the construction
+            ecosystem.
           </p>
         </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="py-12 sm:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Complete Solutions</h2>
-            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
-              High-quality chemical solutions for diverse construction and industrial applications
+      {/* Product Grid Section */}
+      <section className="py-10 sm:py-16 lg:py-20 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
+              Complete Solutions
+            </h2>
+            <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-3 sm:mb-6"></div>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
+              High-quality chemical solutions for diverse construction and
+              industrial applications
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {productCategories.map((category, index) => (
-              <ProductCard
+              <div
                 key={index}
-                title={category.title}
-                products={category.products}
-              />
+                className="group relative h-[340px] sm:h-[380px] lg:h-[420px] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+              >
+                {/* ✅ Background Layer */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 blur-[2px] brightness-90"
+                  style={{ backgroundImage: `url(${category.bgImage})` }}
+                ></div>
+
+                {/* Overlay for contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/60 to-transparent"></div>
+
+                {/* Foreground Content */}
+                <div className="absolute inset-0 p-4 sm:p-5 lg:p-6 flex flex-col justify-end">
+                  <div className="transform transition-all duration-500 group-hover:-translate-y-2">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 lg:mb-4 drop-shadow-lg">
+                      {category.title}
+                    </h3>
+                    <div className="bg-white/90 backdrop-blur-lg rounded-lg sm:rounded-xl p-3 sm:p-4 lg:p-5 shadow-xl cursor-pointer transition-all hover:scale-[1.02]">
+                      <ul className="space-y-1.5 sm:space-y-2 lg:space-y-2.5 list-disc list-inside text-left">
+                        {category.products.map((item, i) => (
+                          <li key={i} className="text-xs sm:text-sm text-gray-800">
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Quality Assurance */}
-      <section className="py-12 sm:py-16 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Quality & Technical Support</h2>
-            <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
-              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Quality Control</h3>
-                <p className="text-sm text-gray-700 leading-relaxed">
-                  Backed by a fully equipped laboratory with qualified engineers and chemists. Regular tests ensure 
-                  quality of finished products for various construction & industrial applications.
-                </p>
+      {/* Quality Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Quality and Technical Support
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Quality Control Card */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                <svg
+                  className="w-7 h-7 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
               </div>
-              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Technical Support</h3>
-                <p className="text-sm text-gray-700 leading-relaxed">
-                  Vigorous onsite support & quality systems maintain product quality and solve construction problems. 
-                  Our technical team provides excellent services and troubleshooting where needed.
-                </p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Quality Control
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Backed by a fully equipped laboratory with qualified engineers
+                and chemists. Regular tests ensure quality of finished products
+                for various construction and industrial applications.
+              </p>
+            </div>
+
+            {/* Technical Support Card */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                <svg
+                  className="w-7 h-7 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0z"
+                  />
+                </svg>
               </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Technical Support
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Vigorous onsite support and quality systems maintain product
+                quality and solve construction problems. Our technical team
+                provides excellent services and troubleshooting where needed.
+              </p>
             </div>
           </div>
         </div>
