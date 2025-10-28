@@ -103,10 +103,10 @@ export default function HomePage() {
     <div className="max-w-6xl mx-auto">
       <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">Management Profile</h2>
       
-      {/* Horizontal scroll on mobile, grid on desktop */}
-      <div className="flex overflow-x-auto pb-6 space-x-6 sm:grid sm:grid-cols-2 sm:gap-8 sm:space-x-0">
+      {/* Slider on mobile, grid on desktop */}
+      <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-6 space-x-6 sm:grid sm:grid-cols-2 sm:gap-8 sm:space-x-0 sm:overflow-visible">
         {/* Mr. Faheem Ahmed */}
-        <div className="min-w-[300px] sm:min-w-0 bg-white border border-gray-200 p-6 rounded-lg flex-shrink-0">
+        <div className="min-w-full snap-center sm:min-w-0 bg-white border border-gray-200 p-6 rounded-lg flex-shrink-0">
           <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Mr. Faheem Ahmed</h3>
           <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
             <p>
@@ -119,7 +119,7 @@ export default function HomePage() {
         </div>
 
         {/* Mr. M. Kashif */}
-        <div className="min-w-[300px] sm:min-w-0 bg-white border border-gray-200 p-6 rounded-lg flex-shrink-0">
+        <div className="min-w-full snap-center sm:min-w-0 bg-white border border-gray-200 p-6 rounded-lg flex-shrink-0">
           <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Mr. M. Kashif</h3>
           <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
             <p>
@@ -130,6 +130,12 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Slide Indicators - Only visible on mobile */}
+      <div className="flex justify-center gap-2 mt-4 sm:hidden">
+        <div className="w-2 h-2 rounded-full bg-gray-400"></div>
+        <div className="w-2 h-2 rounded-full bg-gray-400"></div>
       </div>
     </div>
   </div>
