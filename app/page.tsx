@@ -1,8 +1,41 @@
 "use client";
 import Image from "next/image";
 import { Target, Users, Award, TrendingUp, CheckCircle } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 
 export default function HomePage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const totalSlides = 2;
+
+  const scrollToSlide = (slideIndex: number) => {
+    if (sliderRef.current) {
+      const slideWidth = sliderRef.current.offsetWidth;
+      sliderRef.current.scrollTo({
+        left: slideIndex * slideWidth,
+        behavior: 'smooth'
+      });
+      setCurrentSlide(slideIndex);
+    }
+  };
+
+  const handleScroll = () => {
+    if (sliderRef.current) {
+      const slideWidth = sliderRef.current.offsetWidth;
+      const scrollPosition = sliderRef.current.scrollLeft;
+      const newSlide = Math.round(scrollPosition / slideWidth);
+      setCurrentSlide(newSlide);
+    }
+  };
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (slider) {
+      slider.addEventListener('scroll', handleScroll);
+      return () => slider.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
     <div className="bg-white">
       {/* Hero Section - Full Page */}
@@ -72,7 +105,7 @@ export default function HomePage() {
             <p>
               Backed by a fully equipped laboratory at our own premises with a team of qualified engineers and 
               chemists, we carry out regular tests to maintain quality of finished products for various 
-              construction & industrial applications. Vigorous onsite support & quality systems allow for 
+              construction &amp; industrial applications. Vigorous onsite support &amp; quality systems allow for 
               maintaining the quality of our products, as well as solve construction and industrial problems.
             </p>
             <p>
@@ -103,43 +136,60 @@ export default function HomePage() {
     <div className="max-w-6xl mx-auto">
       <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">Management Profile</h2>
       
-      {/* Slider on mobile, grid on desktop */}
-      <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-6 space-x-6 sm:grid sm:grid-cols-2 sm:gap-8 sm:space-x-0 sm:overflow-visible">
-        {/* Mr. Faheem Ahmed */}
-        <div className="min-w-full snap-center sm:min-w-0 bg-white border border-gray-200 p-6 rounded-lg flex-shrink-0">
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Mr. Faheem Ahmed</h3>
-          <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
-            <p>
-              Seasoned building material specialist with over 35 years of extensive hands-on experience in sales and marketing within the building materials industry.
-            </p>
-            <p>
-              Distinguished career with significant achievements and contributions to the industry. Internationally recognized speaker at notable cement conferences including INTERCEM and CEMTRADE.
-            </p>
+      {/* Slider Container */}
+      <div className="relative">
+        {/* Slider on mobile, grid on desktop */}
+        <div 
+          ref={sliderRef}
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:gap-8 sm:space-x-0 sm:overflow-visible no-scrollbar"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {/* Mr. Faheem Ahmed */}
+          <div className="w-full flex-shrink-0 snap-center sm:w-auto bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Mr. Faheem Ahmed</h3>
+            <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+              <p>
+                Seasoned building material specialist with over 35 years of extensive hands-on experience in sales and marketing within the building materials industry.
+              </p>
+              <p>
+                Distinguished career with significant achievements and contributions to the industry. Internationally recognized speaker at notable cement conferences including INTERCEM and CEMTRADE.
+              </p>
+            </div>
+          </div>
+
+          {/* Mr. M. Kashif */}
+          <div className="w-full flex-shrink-0 snap-center sm:w-auto bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Mr. M. Kashif</h3>
+            <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+              <p>
+                Engineering graduate and MBA in marketing with versatile capabilities demonstrated across multiple avenues in construction and building materials industry since 2007.
+              </p>
+              <p>
+                Professional experience includes associations at management positions with different national and multinational companies in cement, ready-mix concrete and construction chemical industries.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Mr. M. Kashif */}
-        <div className="min-w-full snap-center sm:min-w-0 bg-white border border-gray-200 p-6 rounded-lg flex-shrink-0">
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Mr. M. Kashif</h3>
-          <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
-            <p>
-              Engineering graduate and MBA in marketing with versatile capabilities demonstrated across multiple avenues in construction and building materials industry since 2007.
-            </p>
-            <p>
-              Professional experience includes associations at management positions with different national and multinational companies in cement, ready-mix concrete and construction chemical industries.
-            </p>
-          </div>
+        {/* Slide Indicators - Only visible on mobile */}
+        <div className="flex justify-center gap-2 mt-6 sm:hidden">
+          {[...Array(totalSlides)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                currentSlide === index ? 'bg-blue-600 w-8' : 'bg-gray-300'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+              type="button"
+            />
+          ))}
         </div>
-      </div>
-
-      {/* Slide Indicators - Only visible on mobile */}
-      <div className="flex justify-center gap-2 mt-4 sm:hidden">
-        <div className="w-2 h-2 rounded-full bg-gray-400"></div>
-        <div className="w-2 h-2 rounded-full bg-gray-400"></div>
       </div>
     </div>
   </div>
 </section>
+
      {/* Vision & Mission - Horizontal Scroll on Mobile */}
 <section className="relative py-10 sm:py-16 bg-gray-50 overflow-hidden">
   <Image
@@ -150,7 +200,7 @@ export default function HomePage() {
   />
   <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex overflow-x-auto pb-4 space-x-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-x-0 max-w-5xl mx-auto">
-      <div className="min-w-[280px] sm:min-w-0 bg-white/40 backdrop-blur-sm border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"> {/* Reduced opacity to 40% */}
+      <div className="min-w-[280px] sm:min-w-0 bg-white/40 backdrop-blur-sm border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
         <div className="flex items-center mb-3">
           <div className="bg-blue-600 p-2 rounded-lg mr-3">
             <Target className="text-white" size={18} />
@@ -162,7 +212,7 @@ export default function HomePage() {
           experience a healed and healthier future together.
         </p>
       </div>
-      <div className="min-w-[280px] sm:min-w-0 bg-white/40 backdrop-blur-sm border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"> {/* Reduced opacity to 40% */}
+      <div className="min-w-[280px] sm:min-w-0 bg-white/40 backdrop-blur-sm border border-blue-100 p-5 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
         <div className="flex items-center mb-3">
           <div className="bg-blue-600 p-2 rounded-lg mr-3">
             <CheckCircle className="text-white" size={18} />
@@ -177,6 +227,7 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+
       {/* Core Values - Horizontal Scroll on Mobile */}
       <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -351,8 +402,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      
-
       <style jsx global>{`
         @keyframes fade-in-up {
           from {
@@ -368,6 +417,24 @@ export default function HomePage() {
         .animate-fade-in-up {
           animation: fade-in-up 0.6s ease-out forwards;
           opacity: 0;
+        }
+
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </div>
