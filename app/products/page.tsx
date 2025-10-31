@@ -5,7 +5,7 @@ export default function ProductsPage() {
   const productCategories = [
     {
       title: "Concrete Admixtures",
-      bgImage: "/concrete-mix.png",
+      bgImage: "/concrete-admixtures.jpg",
       products: [
         "High strength super plasticizer",
         "Polycarboxylate based plasticizer",
@@ -16,7 +16,7 @@ export default function ProductsPage() {
     },
     {
       title: "Cement Additives",
-      bgImage: "/cement-prod.jpg",
+      bgImage: "/cement-additive.jpg",
       products: [
         "Improved grinding efficiency",
         "Reduce energy cost",
@@ -27,7 +27,7 @@ export default function ProductsPage() {
     },
     {
       title: "Tile Adhesives & Grouts",
-      bgImage: "/tile-prod.png",
+      bgImage: "/tile-prod.jpg",
       products: [
         "Standard grade adhesives",
         "Superior adhesion strength",
@@ -38,7 +38,7 @@ export default function ProductsPage() {
     },
     {
       title: "Cementitious Grouts",
-      bgImage: "/cementous-grout.webp",
+      bgImage: "/cementitious-grout.jpg",
       products: [
         "Restricted grout",
         "Non-shrink grout",
@@ -49,7 +49,7 @@ export default function ProductsPage() {
     },
     {
       title: "Waterproofing Solutions",
-      bgImage: "/Waterproofing-Products.webp",
+      bgImage: "/waterproofing-products.jpg",
       products: [
         "Crystalline coating",
         "Integral waterproofing",
@@ -60,7 +60,7 @@ export default function ProductsPage() {
     },
     {
       title: "Joint Sealants",
-      bgImage: "/joint-prod.webp",
+      bgImage: "/joint-prod.jpg",
       products: [
         "Polyurethane sealant",
         "Polysulphide sealant",
@@ -82,7 +82,7 @@ export default function ProductsPage() {
     },
     {
       title: "Industrial Flooring",
-      bgImage: "/flooring.png",
+      bgImage: "/industrial-flooring.jpg",
       products: [
         "Non-metallic hardener",
         "Acrylic floor sealer",
@@ -93,7 +93,7 @@ export default function ProductsPage() {
     },
     {
       title: "Industrial Chemicals",
-      bgImage: "/indus-chem-prod.png",
+      bgImage: "/industrial-chem.jpg",
       products: [
         "Pharmaceutical grade",
         "Agricultural solutions",
