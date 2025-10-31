@@ -18,10 +18,10 @@ export default function CertificationsPage() {
       </span>
     </div>
     <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-3 sm:mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-      Certifications & Quality
+      Business Certifications
     </h1>
     <p className="text-sm sm:text-base lg:text-lg max-w-3xl mx-auto text-gray-100 leading-relaxed">
-      Committed to the highest standards of quality, safety, and environmental responsibility
+      Committed to maintaining high business standards and product quality
     </p>
   </div>
 </section>
@@ -31,20 +31,20 @@ export default function CertificationsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Certified Quality Excellence
+              Business Excellence
             </h2>
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-              At Ultimate Blend, we are committed to maintaining the highest quality standards 
-              in every aspect of our manufacturing and operations.
+              At Ultimate Blend, we are a trusted and registered business enterprise, committed to 
+              maintaining professional standards and delivering value to our customers since 2010.
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { title: "Registered Business", desc: "Officially registered with KCCI and FBR" },
-              { title: "Established 2010", desc: "Over a decade of quality manufacturing excellence" },
-              { title: "Research & Development", desc: "Continuous innovation in chemical solutions" },
-              { title: "Quality Systems", desc: "Rigorous testing and process controls" }
+              { title: "Established 2010", desc: "Over a decade of trusted business operations" },
+              { title: "Compliance", desc: "Meeting industry standards and regulations" },
+              { title: "Business Excellence", desc: "Committed to customer satisfaction" }
             ].map((item, idx) => (
               <div key={idx} className="bg-blue-50 p-5 sm:p-6 rounded-lg text-center border border-blue-100">
                 <div className="bg-white w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4 border border-blue-200">
@@ -121,7 +121,7 @@ export default function CertificationsPage() {
       <section className="py-10 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-10 sm:mb-12">
-            Our Quality Assurance Process
+            Our Business Process
           </h2>
           
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
@@ -129,17 +129,17 @@ export default function CertificationsPage() {
               {
                 num: "01",
                 title: "Raw Material Testing",
-                desc: "Every batch of raw materials undergoes rigorous testing before being approved for production. We verify purity, composition, and quality against strict ISO specifications."
+                desc: "Every batch of raw materials undergoes rigorous testing before being approved for production. We verify purity, composition, and quality against our strict industry standards."
               },
               {
                 num: "02",
                 title: "Production Monitoring",
-                desc: "Continuous monitoring throughout the manufacturing process ensures consistency. Real-time quality checks and automated systems maintain precise formulations as per ISO standards."
+                desc: "Continuous monitoring throughout the manufacturing process ensures consistency. Real-time quality checks and automated systems maintain precise formulations for optimal results."
               },
               {
                 num: "03",
                 title: "Final Product Testing",
-                desc: "Comprehensive testing of finished products in our state-of-the-art laboratory. Products are released only after passing all quality parameters and ISO requirements."
+                desc: "Comprehensive testing of finished products in our state-of-the-art laboratory. Products are released only after passing all quality parameters and industry requirements."
               }
             ].map((step, idx) => (
               <div key={idx} className="bg-white border border-gray-200 p-6 sm:p-8 rounded-lg shadow-sm">
@@ -162,8 +162,8 @@ export default function CertificationsPage() {
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {[
               {
-                title: "ISO Quality Management",
-                desc: "Our facilities operate under ISO 9001:2015 quality management standards, ensuring consistent product quality and continuous improvement in all processes."
+                title: "Quality Management",
+                desc: "Our facilities operate under state-of-the-art quality management standards, ensuring consistent product quality and continuous improvement in all processes."
               },
               {
                 title: "Research & Development",
@@ -175,7 +175,7 @@ export default function CertificationsPage() {
               },
               {
                 title: "Batch Traceability",
-                desc: "Complete tracking from raw materials to final delivery with comprehensive documentation as per ISO requirements."
+                desc: "Complete tracking from raw materials to final delivery with comprehensive documentation as per quality assurance requirements."
               }
             ].map((cert, idx) => (
               <div key={idx} className="bg-blue-50 rounded-lg p-5 sm:p-6 border border-blue-100">
@@ -202,23 +202,23 @@ export default function CertificationsPage() {
               Our Commitment to Excellence
             </h2>
             <p className="text-blue-100 text-sm sm:text-base leading-relaxed mb-8">
-              Our ISO 9001:2015 certification is a testament to our unwavering commitment to quality. 
-              We continuously invest in improving our processes, training our team, and maintaining 
-              the highest standards to deliver exceptional products and services to our customers.
+              As a registered member of KCCI and compliant with FBR regulations, we demonstrate our 
+              commitment to ethical business practices. We continuously invest in improving our processes, 
+              training our team, and maintaining professional standards to serve our customers better.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-left">
               {[
                 {
-                  title: "Continuous Improvement",
-                  desc: "Regular audits and process enhancements to maintain ISO standards"
+                  title: "Business Ethics",
+                  desc: "Maintaining transparent and compliant business operations"
                 },
                 {
                   title: "Customer Focus",
-                  desc: "Quality systems designed to meet and exceed customer expectations"
+                  desc: "Business practices designed to ensure customer satisfaction"
                 },
                 {
-                  title: "Process Excellence",
-                  desc: "Standardized procedures ensuring consistent quality delivery"
+                  title: "Professional Standards",
+                  desc: "Following industry best practices and regulations"
                 }
               ].map((item, idx) => (
                 <div key={idx} className="bg-white/10 p-5 sm:p-6 rounded-lg border border-white/20">
