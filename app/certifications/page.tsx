@@ -14,7 +14,7 @@ export default function CertificationsPage() {
   <div className="relative max-w-7xl mx-auto px-4 sm:px-6 text-center z-10">
     <div className="inline-block mb-2 sm:mb-4 px-3 py-1 sm:px-4 sm:py-1.5 bg-blue-600/40 backdrop-blur-sm rounded-full border border-blue-300/40">
       <span className="text-xs sm:text-sm font-medium text-white">
-        ISO Certified
+        Registered Business
       </span>
     </div>
     <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-3 sm:mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -34,14 +34,14 @@ export default function CertificationsPage() {
               Certified Quality Excellence
             </h2>
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-              At Ultimate Blend, our ISO certification demonstrates our commitment to maintaining 
-              the highest quality standards in every aspect of our manufacturing and operations.
+              At Ultimate Blend, we are committed to maintaining the highest quality standards 
+              in every aspect of our manufacturing and operations.
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { title: "ISO Certified", desc: "Internationally recognized quality management system" },
+              { title: "Registered Business", desc: "Officially registered with KCCI and FBR" },
               { title: "Established 2010", desc: "Over a decade of quality manufacturing excellence" },
               { title: "Research & Development", desc: "Continuous innovation in chemical solutions" },
               { title: "Quality Systems", desc: "Rigorous testing and process controls" }
@@ -58,32 +58,58 @@ export default function CertificationsPage() {
         </div>
       </section>
 
-      {/* ISO Certificate Display */}
+      {/* Certificates Display */}
       <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-10 sm:mb-12">
-              Our ISO Certification
+              Our Certifications
             </h2>
             
-            <div className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
-              <div className="relative h-[500px] sm:h-[700px]">
-                <Image 
-                  src="/certificate.jpg" // Replace with your actual certificate path
-                  alt="Ultimate Blend ISO 9001 Quality Management System Certification"
-                  fill
-                  className="object-contain p-4 sm:p-6"
-                  priority
-                />
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* NTN Certificate */}
+              <div className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
+                <div className="relative h-[400px] sm:h-[500px]">
+                  <Image 
+                    src="/NTN-cert.png"
+                    alt="Ultimate Blend National Tax Number Certificate"
+                    fill
+                    className="object-contain p-4 sm:p-6"
+                    priority
+                  />
+                </div>
+                <div className="p-4 sm:p-6 bg-gray-50 border-t border-gray-200">
+                  <div className="text-center">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                      National Tax Number (NTN) Registration
+                    </h3>
+                    <p className="text-gray-600 text-sm sm:text-base">
+                      Registered with Federal Board of Revenue (FBR) demonstrating our commitment to tax compliance
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="p-4 sm:p-6 bg-gray-50 border-t border-gray-200">
-                <div className="text-center">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
-                    ISO 9001:2015 Quality Management System
-                  </h3>
-                  <p className="text-gray-600 text-sm sm:text-base">
-                    Certified for consistent quality in manufacturing and supply of construction chemicals
-                  </p>
+
+              {/* KCCI Certificate */}
+              <div className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
+                <div className="relative h-[400px] sm:h-[500px]">
+                  <Image 
+                    src="/KCCI-cert.png"
+                    alt="Ultimate Blend Karachi Chamber of Commerce Certificate"
+                    fill
+                    className="object-contain p-4 sm:p-6"
+                    priority
+                  />
+                </div>
+                <div className="p-4 sm:p-6 bg-gray-50 border-t border-gray-200">
+                  <div className="text-center">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                      KCCI Membership Certificate
+                    </h3>
+                    <p className="text-gray-600 text-sm sm:text-base">
+                      Proud member of Karachi Chamber of Commerce and Industry, reflecting our established presence in Pakistan&apos;s business community
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
