@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
 
     await resend.emails.send({
       from: 'Ultimate Blend <onboarding@resend.dev>', // Use Resend's domain
-      to: 'nimilzubair1@gmail.com',
+      to: 'info@ultimate-blend.com',
       replyTo: email,
       subject: `Contact Form: ${subject}`,
       html: `
