@@ -1,12 +1,12 @@
-import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import { NextResponse } from 'next/server'
+import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY)
 
-export async function POST(req: Request) {
+export async function POST(req) {
   try {
-    const body = await req.json();
-    const { name, email, phone, company, subject, message } = body;
+    const body = await req.json()
+    const { name, email, phone, company, subject, message } = body
 
     await resend.emails.send({
       from: 'Ultimate Blend <onboarding@resend.dev>',
@@ -21,11 +21,11 @@ export async function POST(req: Request) {
         <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,
-    });
+    })
 
-    return NextResponse.json({ message: 'Email sent successfully!' });
+    return NextResponse.json({ message: 'Email sent successfully!' })
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: 'Error sending email' }, { status: 500 });
+    console.error(error)
+    return NextResponse.json({ message: 'Error sending email' }, { status: 500 })
   }
 }
