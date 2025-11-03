@@ -11,7 +11,7 @@ export async function POST(req) {
 
     await resend.emails.send({
       from: 'Ultimate Blend <onboarding@resend.dev>',
-      to: 'info@ultimate-blend.com',
+      to: 'alishbahassan501@gmail.com',
       replyTo: email,
       subject: `Contact Form: ${subject}`,
       html: `<h2>New Contact Form Submission</h2>
