@@ -1,15 +1,15 @@
-// app/api/contact/route.ts
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(request: NextRequest) {
+export async function POST(req: Request) {
   try {
-    const { name, email, phone, company, subject, message } = await request.json();
+    const body = await req.json();
+    const { name, email, phone, company, subject, message } = body;
 
     await resend.emails.send({
-      from: 'Ultimate Blend <onboarding@resend.dev>', // Use Resend's domain
+      from: 'Ultimate Blend <onboarding@resend.dev>',
       to: 'info@ultimate-blend.com',
       replyTo: email,
       subject: `Contact Form: ${subject}`,
@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ message: 'Email sent successfully!' });
   } catch (error) {
-    console.error('Error:', error);
+    console.error(error);
     return NextResponse.json({ message: 'Error sending email' }, { status: 500 });
   }
 }
